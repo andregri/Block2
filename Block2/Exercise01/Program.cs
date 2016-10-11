@@ -6,6 +6,25 @@ namespace Block2
     {
         static void Main(string[] args)
         {
+            int firstInput;
+            int secondInput;
+
+            do
+            {
+                Console.WriteLine("Please enter two integer number");
+                while ((int.TryParse(Console.ReadLine(), out firstInput)) & (int.TryParse(Console.ReadLine(), out secondInput)))
+                {
+     
+
+                    Console.WriteLine("\n\nPlease enter two integer number");
+                }
+
+
+                Console.WriteLine("Error.Please enter two INTEGER number");
+                int.TryParse(Console.ReadLine(), out firstInput);
+                int.TryParse(Console.ReadLine(), out secondInput);
+
+            } while (true);
         }
 
         static int getMin(int a, int b)
