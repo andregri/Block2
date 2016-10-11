@@ -17,10 +17,14 @@ namespace Block2
             return array[index];
         }
 
-        static int getMax(int a, int b)
+        static int getMax(int firstNumber, int secondNumber)
         {
-            int[] array = { a, b };
-            return array[(int)(0.5 - ((a - b) / Math.Abs(a - b)) * 0.5)];
+
+            int diff = firstNumber - secondNumber;                      // the difference is negative if 'firstNumber' < 'secondNumber'
+            int sgn = (diff >> 31) & 0x1;                               // check if the value of 'diff' is negative(?)
+            int max = firstNumber - (sgn * diff);                       // if 'firstNumber' < 'secondNumber' , then 'sgn' is equal to 1 and 
+                                                                        // so (sgn * diff ) = (firstNumber - secondNumber)
+            return max;
         }
     }
 }
