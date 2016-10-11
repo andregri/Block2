@@ -2,7 +2,7 @@
 
 namespace Block2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -36,7 +36,7 @@ namespace Block2
             return array[index];
         }
 
-        static int getMax(int firstNumber, int secondNumber)
+        public static int getMax(int firstNumber, int secondNumber)
         {
 
             int diff = firstNumber - secondNumber;                      // the difference is negative if 'firstNumber' < 'secondNumber'
