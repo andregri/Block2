@@ -23,11 +23,10 @@ namespace Block2
                 Console.WriteLine("Error. Please enter two INTEGER number");
                 int.TryParse(Console.ReadLine(), out firstInput);
                 int.TryParse(Console.ReadLine(), out secondInput);
-
             };
         }
 
-        static int getMin(int a, int b)
+        public static int getMin(int a, int b)
         {
             int[] array = { a, b };
             int diff = a - b;
@@ -38,7 +37,6 @@ namespace Block2
 
         public static int getMax(int firstNumber, int secondNumber)
         {
-
             int diff = firstNumber - secondNumber;                      // the difference is negative if 'firstNumber' < 'secondNumber'
             int sgn = (diff >> 31) & 0x1;                               // check if the value of 'diff' is negative(?)
             int max = firstNumber - (sgn * diff);                       // if 'firstNumber' < 'secondNumber' , then 'sgn' is equal to 1 and 
