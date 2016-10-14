@@ -6,22 +6,25 @@ namespace Exercise2
     {
         static void Main(string[] args)
         {
-            int counter = 0;
             int counterMax = 100;
+
+            Fibonacci(counterMax);
+        }
+
+        public static ulong Fibonacci(int counterMax)
+        {
             ulong firstNumber = 0;
             ulong secondNumber = 1;
 
-            Fibonacci(counter, counterMax, firstNumber, secondNumber);
-        }
-
-        public static void Fibonacci(int counter, int counterMax, ulong previousNumber, ulong number)
-        {
-            ulong sum = number + previousNumber;
-            Console.Write("{0,3}: {1}\n", counter,sum);
-            if (counter < counterMax)
+            for(int counter = 0; counter < counterMax; counter++)
             {
-                Fibonacci(++counter,counterMax, number, sum);
+                Console.WriteLine("{0,3}: {1}", counter, firstNumber);
+                ulong temp = firstNumber;
+                firstNumber = secondNumber;
+                secondNumber += temp;
             }
+
+            return firstNumber;
         }
     }
 }
