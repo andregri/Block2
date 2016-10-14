@@ -6,7 +6,27 @@ namespace Exercise3
     {
         static void Main(string[] args)
         {
-            
+            double a, b, c;
+
+            while (true)
+            {
+                do
+                {
+                    Console.WriteLine("Please enter the coefficient of x^2: ");
+                } while (Double.TryParse(Console.ReadLine(), out a));
+
+                do
+                {
+                    Console.WriteLine("Please enter the coefficient of x^1: ");
+                } while (Double.TryParse(Console.ReadLine(), out b));
+
+                do
+                {
+                    Console.WriteLine("Please enter the coefficient of x^0: ");
+                } while (Double.TryParse(Console.ReadLine(), out c));
+
+                solveQuadraticEq(a, b, c);
+            }
         }
 
         public static void solveQuadraticEq(double a, double b, double c)
