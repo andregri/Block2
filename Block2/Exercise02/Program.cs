@@ -16,11 +16,11 @@ namespace Exercise2
             Fibonacci(counterMax);
         }
 
-        public static ulong Fibonacci(int counterMax)
+        public static double Fibonacci(int counterMax)
         {
-            ulong firstNumber = 0;
-            ulong secondNumber = 1;
-            ulong result = 0;
+            double firstNumber = 0;
+            double secondNumber = 1;
+            double result = 0;
 
             Console.Write("{0,3}: {1}\n", 0, firstNumber);
             Console.Write("{0,3}: {1}\n", 1, secondNumber);
