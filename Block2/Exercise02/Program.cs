@@ -18,23 +18,23 @@ namespace Exercise2
 
         public static ulong Fibonacci(int counterMax)
         {
-            ulong first = 0;
-            ulong second = 1;
-            ulong sum = 0;
+            ulong firstNumber = 0;
+            ulong secondNumber = 1;
+            ulong result = 0;
 
-            Console.Write("{0,3}: {1}\n", 0, first);
-            Console.Write("{0,3}: {1}\n", 1, second);
+            Console.Write("{0,3}: {1}\n", 0, firstNumber);
+            Console.Write("{0,3}: {1}\n", 1, secondNumber);
 
             for (int counter = 2; counter < counterMax; counter++)
             {
-                sum = first + second;
-                Console.Write("{0,3}: {1}\n", counter, sum);
-                first = second;
-                second = sum;
+                result = firstNumber + secondNumber;
+                Console.Write("{0,3}: {1}\n", counter, result);
+                firstNumber = secondNumber;
+                secondNumber = result;
             }
 
-            //return the last sum for debugging purpose
-            return sum;
+            //return the last number for debugging purpose
+            return result;
         }
     }
 }
