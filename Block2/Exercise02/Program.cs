@@ -1,27 +1,40 @@
 ﻿using System;
 
+/*
+ * Program to calculate the first 100 number of Fibonacci series.
+ * To debug we used "http://www.readme.it/libri/M/M00101.shtml"
+ */
+
 namespace Exercise2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            int counter = 0;
             int counterMax = 100;
-            ulong firstNumber = 0;
-            ulong secondNumber = 1;
 
-            Fibonacci(counter, counterMax, firstNumber, secondNumber);
+            Fibonacci(counterMax);
         }
 
-        public static void Fibonacci(int counter, int counterMax, ulong previousNumber, ulong number)
+        public static ulong Fibonacci(int counterMax)
         {
-            ulong sum = number + previousNumber;
-            Console.Write("{0,3}: {1}\n", counter,sum);
-            if (counter < counterMax)
+            ulong first = 0;
+            ulong second = 1;
+            ulong sum = 0;
+
+            Console.Write("{0,3}: {1}\n", 0, first);
+            Console.Write("{0,3}: {1}\n", 1, second);
+
+            for (int counter = 2; counter < counterMax; counter++)
             {
-                Fibonacci(++counter,counterMax, number, sum);
+                sum = first + second;
+                Console.Write("{0,3}: {1}\n", counter, sum);
+                first = second;
+                second = sum;
             }
+
+            //return the last sum for debugging purpose
+            return sum;
         }
     }
 }
