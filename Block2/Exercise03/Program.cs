@@ -6,26 +6,26 @@ namespace Exercise3
     {
         static void Main(string[] args)
         {
-            double a, b, c;
+            double firstCoefficient, secondCoefficient, knownTerm;
 
             while (true)
             {
                 do
                 {
-                    Console.WriteLine("Please enter the coefficient of x^2: ");
-                } while (Double.TryParse(Console.ReadLine(), out a));
+                    Console.Write("Please enter the coefficient of x^2: ");
+                } while (!Double.TryParse(Console.ReadLine(), out firstCoefficient));
 
                 do
                 {
-                    Console.WriteLine("Please enter the coefficient of x^1: ");
-                } while (Double.TryParse(Console.ReadLine(), out b));
+                    Console.Write("Please enter the coefficient of x^1: ");
+                } while (!Double.TryParse(Console.ReadLine(), out secondCoefficient));
 
                 do
                 {
-                    Console.WriteLine("Please enter the coefficient of x^0: ");
-                } while (Double.TryParse(Console.ReadLine(), out c));
+                    Console.Write("Please enter the coefficient of known term: ");
+                } while (!Double.TryParse(Console.ReadLine(), out knownTerm));
 
-                solveQuadraticEq(a, b, c);
+                solveQuadraticEq(firstCoefficient, secondCoefficient, knownTerm);
             }
         }
 
