@@ -16,12 +16,15 @@ namespace Exercise3
             double discriminant = getDiscriminant(a, b, c);
             if (discriminant > 0)
             {
-                // firstRoot, secondRoot;
+                firstRoot = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                secondRoot = (-b - Math.Sqrt(discriminant)) / (2 * a);
+
+                Console.WriteLine("Real solution are: {0:f4} or {1:f4}", firstRoot, secondRoot);
             }
 
             else
             {
-
+                Console.WriteLine("Equation hasn't real solution");
             }
         }
 
