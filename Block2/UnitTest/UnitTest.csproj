@@ -69,42 +69,6 @@
       <Project>{c18eb37e-277b-4c88-8f05-5b65c00d0f28}</Project>
       <Name>Exercise01</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Exercise02\Exercise02.csproj">
-      <Project>{eec3daec-2a45-442d-8998-88262acbbaea}</Project>
-      <Name>Exercise02</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise03\Exercise03.csproj">
-      <Project>{f21124f7-8ac5-462b-b7ae-36871d89ba41}</Project>
-      <Name>Exercise03</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise04\Exercise04.csproj">
-      <Project>{2866064b-bdff-4219-ba18-8742b1a64e93}</Project>
-      <Name>Exercise04</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise05\Exercise05.csproj">
-      <Project>{001a5a04-7d53-49d1-a0cd-7b2b622e4a71}</Project>
-      <Name>Exercise05</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise06\Exercise06.csproj">
-      <Project>{5438fc5a-33cf-4709-ba94-abd818dbbabc}</Project>
-      <Name>Exercise06</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise07\Exercise07.csproj">
-      <Project>{2855fa4b-b7cc-4680-9bbf-4e29f1ee1ec4}</Project>
-      <Name>Exercise07</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise08\Exercise08.csproj">
-      <Project>{e6a0b2f0-b07d-4ddd-bd79-2baba629b5f0}</Project>
-      <Name>Exercise08</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise09\Exercise09.csproj">
-      <Project>{039d83f9-82dc-4bf8-8c04-f87f7282f8d6}</Project>
-      <Name>Exercise09</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Exercise10\Exercise10.csproj">
-      <Project>{af39464c-e8c1-47f9-9a3b-31e2143069b9}</Project>
-      <Name>Exercise10</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
