@@ -90,7 +90,7 @@ namespace Exercise10
             return matrix;
         }
 
-        public static void initMatrixD(int size)
+        public static int[,] initMatrixD(int size)
         {
             int[,] matrix = new int[size, size];
             int el = 0;
@@ -120,7 +120,6 @@ namespace Exercise10
                 rowPos++;
                 colPos -= size - counter;
             }
-
 
             return matrix;
         }
