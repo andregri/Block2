@@ -90,6 +90,82 @@ namespace Exercise10
             return matrix;
         }
 
+        public static void initMatrixD(int size)
+        {
+            int[,] matrix = new int[size, size];
+            int el = 0;
+            int colPos = 0;
+            int rowPos = 0;
+            int counter = 0;
+
+            while (el < size * size)
+            {
+                el += goDown(matrix, colPos, rowPos, size - counter, el);
+                rowPos += size - counter;
+                colPos++;
+
+                counter++;
+
+                el += goRight(matrix, rowPos, colPos, size - counter, el);
+                rowPos--;
+                colPos += size - counter;
+
+                el += goUp(matrix, colPos, rowPos, size - counter, el);
+                colPos--;
+                rowPos -= size - counter;
+
+                counter++;
+
+                el += goLeft(matrix, rowPos, colPos, size - counter, el);
+                rowPos++;
+                colPos -= size - counter;
+            }
+
+
+            return matrix;
+        }
+
+        public static int goDown(int[,] matrix, int col, int rowStart, int passes, int valueStart)
+        {
+            for (int p = rowStart; p < rowStart + passes; p++)
+            {
+                matrix[p, col] = valueStart++;
+            }
+
+            return valueStart;
+        }
+
+        public static int goRight(int[,] matrix, int row, int colStart, int passes, int valueStart)
+        {
+            for (int p = colStart; p < colStart + passes; p++)
+            {
+                matrix[row, p] = valueStart++;
+            }
+
+            return valueStart;
+        }
+
+        public static int goUp(int[,] matrix, int col, int rowStart, int passes, int valueStart)
+        {
+            for (int p = rowStart; p > rowStart - passes; p--)
+            {
+                matrix[p, col] = valueStart++;
+            }
+
+            return valueStart;
+        }
+
+
+        public static int goLeft(int[,] matrix, int row, int colStart, int passes, int valueStart)
+        {
+            for (int p = colStart; p > colStart - passes; p--)
+            {
+                matrix[row, p] = valueStart++;
+            }
+
+            return valueStart;
+        }
+
         public static void printMatrix(int[,] matrix)
         {
             if (matrix == null)
