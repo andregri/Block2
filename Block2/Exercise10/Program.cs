@@ -50,6 +50,46 @@ namespace Exercise10
             return matrix;
         }
 
+        public static int[,] initMatrixC(int size)
+        {
+            int[,] matrix = new int[size, size];
+            int value = 1;
+            
+            //init left half of matrix
+            int lCol = 0;
+
+            for (int lRow = size - 1; lRow >= 0; lRow--)
+            {
+                int j = lRow; //temp index of rows
+
+                //loop to assign values to the (size - row)-th diagonal
+                for (int i = 0; i <= lCol;)
+                {
+                    matrix[j++, i++] = value++;
+                }
+
+                lCol++;
+            }
+
+
+            //init right half of matrix
+            int rRow = size - 1;
+
+            for (int rCol = 1; rCol < size; rCol++)
+            {
+                int j = rCol;
+
+                for (int i = 0; i < rRow;)
+                {
+                    matrix[i++, j++] = value++;
+                }
+
+                rRow--;
+            }
+
+            return matrix;
+        }
+
         public static void printMatrix(int[,] matrix)
         {
             if (matrix == null)
