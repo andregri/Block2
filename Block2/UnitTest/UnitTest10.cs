@@ -8,6 +8,33 @@ namespace UnitTest
     public class UnitTest10
     {
         [TestMethod]
+        public void initMatrixATestSize2()
+        {
+            int[,] result = { { 1, 3 }, { 2, 4 } };
+            int[,] actual = Program.initMatrixA(2);
+            Assert.AreEqual(result[0, 0], actual[0, 0]);
+            Assert.AreEqual(result[1, 0], actual[1, 0]);
+            Assert.AreEqual(result[1, 1], actual[1, 1]);
+            Assert.AreEqual(result[0, 1], actual[0, 1]);
+        }
+
+        [TestMethod]
+        public void initMatrixATestSize3()
+        {
+            int[,] result = { { 1, 4, 7 }, { 2, 5, 8 }, { 3, 6, 9 } };
+            int[,] actual = Program.initMatrixA(3);
+            Assert.AreEqual(result[0, 0], actual[0, 0]);
+            Assert.AreEqual(result[0, 1], actual[0, 1]);
+            Assert.AreEqual(result[0, 2], actual[0, 2]);
+            Assert.AreEqual(result[1, 0], actual[1, 0]);
+            Assert.AreEqual(result[1, 1], actual[1, 1]);
+            Assert.AreEqual(result[1, 2], actual[1, 2]);
+            Assert.AreEqual(result[2, 0], actual[2, 0]);
+            Assert.AreEqual(result[2, 1], actual[2, 1]);
+            Assert.AreEqual(result[2, 2], actual[2, 2]);
+        }
+
+        [TestMethod]
         public void initMatrixZigZagTestSize2()
         {
             int[,] result = { { 1, 4 }, { 2, 3 } };

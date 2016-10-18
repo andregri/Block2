@@ -22,6 +22,22 @@ namespace Exercise10
             Console.WriteLine();
         }
 
+        public static int[,] initMatrixA(int size)
+        {
+            int[,] matrix = new int[size, size];
+            int value = 1;
+
+            for (int col = 0; col < size; col++)
+            {
+                for (int row = 0; row < size; row++)
+                {
+                    matrix[row, col] = value++;
+                }
+            }
+
+            return matrix;
+        }
+
         public static int[,] initMatrixZigZag(int size)
         {
             int[,] matrix = new int[size, size];
