@@ -8,10 +8,10 @@ namespace UnitTest
     public class UnitTest10
     {
         [TestMethod]
-        public void initMatrixBTestSize2()
+        public void initMatrixZigZagTestSize2()
         {
             int[,] result = { { 1, 4 }, { 2, 3 } };
-            int[,] actual = Program.initMatrixB(2);
+            int[,] actual = Program.initMatrixZigZag(2);
             Assert.AreEqual(1, actual[0, 0]);
             Assert.AreEqual(2, actual[1, 0]);
             Assert.AreEqual(3, actual[1, 1]);
@@ -19,10 +19,10 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void initMatrixBTestSize3()
+        public void initMatrixZigZagTestSize3()
         {
             int[,] result = { { 1, 6, 7 }, { 2, 5, 8 }, { 3, 4, 9 } };
-            int[,] actual = Program.initMatrixB(3);
+            int[,] actual = Program.initMatrixZigZag(3);
             Assert.AreEqual(1, actual[0, 0]);
             Assert.AreEqual(2, actual[1, 0]);
             Assert.AreEqual(3, actual[2, 0]);

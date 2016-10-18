@@ -6,9 +6,23 @@ namespace Exercise10
     {
         static void Main(string[] args)
         {
+            int size;
+
+            Console.Write("Enter the square matrix size, please: ");
+            while (!Int32.TryParse(Console.ReadLine(), out size))
+            {
+                Console.WriteLine("Error: the size must be an integer!");
+            }
+
+            printMatrix(initMatrixZigZag(size));
+            Console.WriteLine();
+            printMatrix(initMatrixDiagonal(size));
+            Console.WriteLine();
+            printMatrix(initMatrixSpiral(size));
+            Console.WriteLine();
         }
 
-        public static int[,] initMatrixB(int size)
+        public static int[,] initMatrixZigZag(int size)
         {
             int[,] matrix = new int[size, size];
 
@@ -191,7 +205,7 @@ namespace Exercise10
             {
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    Console.Write(matrix[row, col] + " ");
+                    Console.Write("{0,4}", matrix[row, col]);
                 }
                 Console.WriteLine();
             }
