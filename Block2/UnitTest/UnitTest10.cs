@@ -39,10 +39,10 @@ namespace UnitTest
         {
             int[,] result = { { 1, 4 }, { 2, 3 } };
             int[,] actual = Program.initMatrixZigZag(2);
-            Assert.AreEqual(1, actual[0, 0]);
-            Assert.AreEqual(2, actual[1, 0]);
-            Assert.AreEqual(3, actual[1, 1]);
-            Assert.AreEqual(4, actual[0, 1]);
+            Assert.AreEqual(result[0, 0], actual[0, 0]);
+            Assert.AreEqual(result[1, 0], actual[1, 0]);
+            Assert.AreEqual(result[1, 1], actual[1, 1]);
+            Assert.AreEqual(result[0, 1], actual[0, 1]);
         }
 
         [TestMethod]
@@ -50,26 +50,26 @@ namespace UnitTest
         {
             int[,] result = { { 1, 6, 7 }, { 2, 5, 8 }, { 3, 4, 9 } };
             int[,] actual = Program.initMatrixZigZag(3);
-            Assert.AreEqual(1, actual[0, 0]);
-            Assert.AreEqual(2, actual[1, 0]);
-            Assert.AreEqual(3, actual[2, 0]);
-            Assert.AreEqual(4, actual[2, 1]);
-            Assert.AreEqual(5, actual[1, 1]);
-            Assert.AreEqual(6, actual[0, 1]);
-            Assert.AreEqual(7, actual[0, 2]);
-            Assert.AreEqual(8, actual[1, 2]);
-            Assert.AreEqual(9, actual[2, 2]);
+            Assert.AreEqual(result[0, 0], actual[0, 0]);
+            Assert.AreEqual(result[0, 1], actual[0, 1]);
+            Assert.AreEqual(result[0, 2], actual[0, 2]);
+            Assert.AreEqual(result[1, 0], actual[1, 0]);
+            Assert.AreEqual(result[1, 1], actual[1, 1]);
+            Assert.AreEqual(result[1, 2], actual[1, 2]);
+            Assert.AreEqual(result[2, 0], actual[2, 0]);
+            Assert.AreEqual(result[2, 1], actual[2, 1]);
+            Assert.AreEqual(result[2, 2], actual[2, 2]);
         }
 
         [TestMethod]
         public void initMatrixDiagonalTestSize2()
         {
-            int[,] result = { { 1, 4 }, { 2, 3 } };
+            int[,] result = { { 2, 4 }, { 1, 3 } };
             int[,] actual = Program.initMatrixDiagonal(2);
-            Assert.AreEqual(2, actual[0, 0]);
-            Assert.AreEqual(1, actual[1, 0]);
-            Assert.AreEqual(3, actual[1, 1]);
-            Assert.AreEqual(4, actual[0, 1]);
+            Assert.AreEqual(result[0, 0], actual[0, 0]);
+            Assert.AreEqual(result[1, 0], actual[1, 0]);
+            Assert.AreEqual(result[1, 1], actual[1, 1]);
+            Assert.AreEqual(result[0, 1], actual[0, 1]);
         }
 
         [TestMethod]
