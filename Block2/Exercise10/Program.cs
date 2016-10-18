@@ -50,7 +50,7 @@ namespace Exercise10
             return matrix;
         }
 
-        public static int[,] initMatrixC(int size)
+        public static int[,] initMatrixDiagonal(int size)
         {
             int[,] matrix = new int[size, size];
             int value = 1;
@@ -90,7 +90,7 @@ namespace Exercise10
             return matrix;
         }
 
-        public static int[,] initMatrixD(int size)
+        public static int[,] initMatrixSpiral(int size)
         {
             int[,] matrix = new int[size, size];
             int el = 0;
@@ -113,7 +113,7 @@ namespace Exercise10
 
                 el += goRight(matrix, rowPos, colPos, size - counter, el);
                 rowPos--;
-                //colPos += (size - counter);
+                colPos += (size - counter - 1);
 
                 if (el == (size * size))
                 {
@@ -122,7 +122,7 @@ namespace Exercise10
 
                 el += goUp(matrix, colPos, rowPos, size - counter, el);
                 colPos--;
-                rowPos -= (size - counter);
+                rowPos -= (size - counter - 1);
 
                 counter++;
 
@@ -133,7 +133,7 @@ namespace Exercise10
 
                 el += goLeft(matrix, rowPos, colPos, size - counter, el);
                 rowPos++;
-                colPos -= (size - counter);
+                colPos -= (size - counter - 1);
             }
 
             return matrix;

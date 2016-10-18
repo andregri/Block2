@@ -35,10 +35,10 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void initMatrixCTestSize2()
+        public void initMatrixDiagonalTestSize2()
         {
             int[,] result = { { 1, 4 }, { 2, 3 } };
-            int[,] actual = Program.initMatrixC(2);
+            int[,] actual = Program.initMatrixDiagonal(2);
             Assert.AreEqual(2, actual[0, 0]);
             Assert.AreEqual(1, actual[1, 0]);
             Assert.AreEqual(3, actual[1, 1]);
@@ -46,30 +46,46 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void initMatrixCTestSize3()
+        public void initMatrixDiagonalTestSize3()
         {
-            int[,] result = { { 1, 6, 7 }, { 2, 5, 8 }, { 3, 4, 9 } };
-            int[,] actual = Program.initMatrixC(3);
-            Assert.AreEqual(4, actual[0, 0]);
-            Assert.AreEqual(7, actual[0, 1]);
-            Assert.AreEqual(9, actual[0, 2]);
-            Assert.AreEqual(2, actual[1, 0]);
-            Assert.AreEqual(5, actual[1, 1]);
-            Assert.AreEqual(8, actual[1, 2]);
-            Assert.AreEqual(1, actual[2, 0]);
-            Assert.AreEqual(3, actual[2, 1]);
-            Assert.AreEqual(6, actual[2, 2]);
+            int[,] result = { { 4, 7, 9 }, { 2, 5, 8 }, { 1, 3, 6 } };
+            int[,] actual = Program.initMatrixDiagonal(3);
+            Assert.AreEqual(result[0, 0], actual[0, 0]);
+            Assert.AreEqual(result[0, 1], actual[0, 1]);
+            Assert.AreEqual(result[0, 2], actual[0, 2]);
+            Assert.AreEqual(result[1, 0], actual[1, 0]);
+            Assert.AreEqual(result[1, 1], actual[1, 1]);
+            Assert.AreEqual(result[1, 2], actual[1, 2]);
+            Assert.AreEqual(result[2, 0], actual[2, 0]);
+            Assert.AreEqual(result[2, 1], actual[2, 1]);
+            Assert.AreEqual(result[2, 2], actual[2, 2]);
         }
 
         [TestMethod]
-        public void initMatrixDTestSize2()
+        public void initMatrixSpiralTestSize2()
         {
-            int[,] result = { { 1, 3 }, { 2, 4 } };
-            int[,] actual = Program.initMatrixD(2);
+            int[,] result = { { 0, 3 }, { 1, 2 } };
+            int[,] actual = Program.initMatrixSpiral(2);
             Assert.AreEqual(result[0, 0], actual[0, 0]);
             Assert.AreEqual(result[1, 0], actual[1, 0]);
             Assert.AreEqual(result[1, 1], actual[1, 1]);
             Assert.AreEqual(result[0, 1], actual[0, 1]);
+        }
+
+        [TestMethod]
+        public void initMatrixSpiralTestSize3()
+        {
+            int[,] result = { { 0, 7, 6 }, { 1, 8, 5 }, { 2, 3, 4 } };
+            int[,] actual = Program.initMatrixSpiral(3);
+            Assert.AreEqual(result[0, 0], actual[0, 0]);
+            Assert.AreEqual(result[0, 1], actual[0, 1]);
+            Assert.AreEqual(result[0, 2], actual[0, 2]);
+            Assert.AreEqual(result[1, 0], actual[1, 0]);
+            Assert.AreEqual(result[1, 1], actual[1, 1]);
+            Assert.AreEqual(result[1, 2], actual[1, 2]);
+            Assert.AreEqual(result[2, 0], actual[2, 0]);
+            Assert.AreEqual(result[2, 1], actual[2, 1]);
+            Assert.AreEqual(result[2, 2], actual[2, 2]);
         }
 
         [TestMethod]
