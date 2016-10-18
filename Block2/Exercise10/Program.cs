@@ -17,12 +17,15 @@ namespace Exercise10
             Console.WriteLine("type A:");
             printMatrix(initMatrixA(size));
             Console.WriteLine();
+
             Console.WriteLine("type B:");
             printMatrix(initMatrixZigZag(size));
             Console.WriteLine();
+
             Console.WriteLine("type C:");
             printMatrix(initMatrixDiagonal(size));
             Console.WriteLine();
+
             Console.WriteLine("type D:");
             printMatrix(initMatrixSpiral(size));
             Console.WriteLine();
@@ -205,7 +208,6 @@ namespace Exercise10
             return passes;
         }
 
-
         public static int goLeft(int[,] matrix, int row, int colStart, int passes, int valueStart)
         {
             for (int p = colStart; p > colStart - passes; p--)
@@ -225,12 +227,32 @@ namespace Exercise10
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
+                printLine(4, matrix.GetLength(0));
+
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
+                    Console.Write("|");
                     Console.Write("{0,4}", matrix[row, col]);
                 }
+                Console.Write("|");
                 Console.WriteLine();
             }
+
+            printLine(4, matrix.GetLength(0));
+        }
+
+        public static void printLine(int elementLen, int tot)
+        {
+            for (int j = 0; j < tot; j++)
+            {
+                Console.Write("+");
+                for (int i = 0; i < elementLen; i++)
+                {
+                    Console.Write("-");
+                }
+            }
+            Console.Write("+");
+            Console.WriteLine();
         }
     }
 }
