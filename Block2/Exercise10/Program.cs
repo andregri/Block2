@@ -14,10 +14,16 @@ namespace Exercise10
                 Console.WriteLine("Error: the size must be an integer!");
             }
 
+            Console.WriteLine("type A:");
+            printMatrix(initMatrixA(size));
+            Console.WriteLine();
+            Console.WriteLine("type B:");
             printMatrix(initMatrixZigZag(size));
             Console.WriteLine();
+            Console.WriteLine("type C:");
             printMatrix(initMatrixDiagonal(size));
             Console.WriteLine();
+            Console.WriteLine("type D:");
             printMatrix(initMatrixSpiral(size));
             Console.WriteLine();
         }
