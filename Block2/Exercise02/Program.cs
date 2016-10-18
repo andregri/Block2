@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 /*
  * Program to calculate the first 100 number of Fibonacci series.
@@ -16,11 +17,11 @@ namespace Exercise2
             Fibonacci(counterMax);
         }
 
-        public static double Fibonacci(int counterMax)
+        public static BigInteger Fibonacci(int counterMax)
         {
-            double firstNumber = 0;
-            double secondNumber = 1;
-            double result = 0;
+            BigInteger firstNumber = 0;
+            BigInteger secondNumber = 1;
+            BigInteger result = 0;
 
             Console.Write("{0,3}: {1}\n", 0, firstNumber);
             Console.Write("{0,3}: {1}\n", 1, secondNumber);
