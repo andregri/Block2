@@ -101,24 +101,39 @@ namespace Exercise10
             while (el < size * size)
             {
                 el += goDown(matrix, colPos, rowPos, size - counter, el);
-                rowPos += size - counter;
+                rowPos += (size - counter - 1);
                 colPos++;
 
                 counter++;
 
+                if (el == (size * size))
+                {
+                    break;
+                }
+
                 el += goRight(matrix, rowPos, colPos, size - counter, el);
                 rowPos--;
-                colPos += size - counter;
+                //colPos += (size - counter);
+
+                if (el == (size * size))
+                {
+                    break;
+                }
 
                 el += goUp(matrix, colPos, rowPos, size - counter, el);
                 colPos--;
-                rowPos -= size - counter;
+                rowPos -= (size - counter);
 
                 counter++;
 
+                if (el == (size * size))
+                {
+                    break;
+                }
+
                 el += goLeft(matrix, rowPos, colPos, size - counter, el);
                 rowPos++;
-                colPos -= size - counter;
+                colPos -= (size - counter);
             }
 
             return matrix;
@@ -131,7 +146,7 @@ namespace Exercise10
                 matrix[p, col] = valueStart++;
             }
 
-            return valueStart;
+            return passes;
         }
 
         public static int goRight(int[,] matrix, int row, int colStart, int passes, int valueStart)
@@ -141,7 +156,7 @@ namespace Exercise10
                 matrix[row, p] = valueStart++;
             }
 
-            return valueStart;
+            return passes;
         }
 
         public static int goUp(int[,] matrix, int col, int rowStart, int passes, int valueStart)
@@ -151,7 +166,7 @@ namespace Exercise10
                 matrix[p, col] = valueStart++;
             }
 
-            return valueStart;
+            return passes;
         }
 
 
@@ -162,7 +177,7 @@ namespace Exercise10
                 matrix[row, p] = valueStart++;
             }
 
-            return valueStart;
+            return passes;
         }
 
         public static void printMatrix(int[,] matrix)
