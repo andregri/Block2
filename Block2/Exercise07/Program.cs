@@ -38,7 +38,7 @@ namespace Exercise7
                 //swap the i-th element of the array with another one
                 int temp = array[i];
 
-                int randomIndex = random.Next(0, n);
+                int randomIndex = random.Next(i, n);
                 array[i] = array[randomIndex];
 
                 array[randomIndex] = temp;
