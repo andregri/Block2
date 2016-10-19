@@ -106,17 +106,21 @@ namespace Exercise6
             try
             {
                 str = str.Trim();
-                int controlGuard = 0;
+                int bit = 0;
 
                 for (int i = 0; i < str.Length; i++)
                 {
                     // parse each char of the passed string
-                    controlGuard = int.Parse(str[i].ToString());
+                    bit = int.Parse(str[i].ToString());
 
-                    if ((controlGuard != 1) || (controlGuard != 0))
-                        return (false);
+                    if ((bit != 1) || (bit != 0))
+                    {
+                        return false;
+                    }
+                        
                 }
-                return (true);
+
+                return true;
             }
 
             catch (FormatException)
