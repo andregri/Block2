@@ -7,12 +7,11 @@ namespace Exercise10
         static void Main(string[] args)
         {
             int size;
-
-            Console.Write("Enter the square matrix size, please: ");
-            while (!Int32.TryParse(Console.ReadLine(), out size))
+            
+            do
             {
-                Console.WriteLine("Error: the size must be an integer!");
-            }
+                Console.Write("Enter the square matrix size, please: ");
+            } while (!Int32.TryParse(Console.ReadLine(), out size) || size <= 0);
 
             Console.WriteLine("type A:");
             printMatrix(initMatrixA(size));
