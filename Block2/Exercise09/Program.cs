@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Exercise9
 {
@@ -7,6 +8,39 @@ namespace Exercise9
     {
         static void Main(string[] args)
         {
+            int element;
+            List<int> list = new List<int>();
+
+            Console.WriteLine("Enter array elements separeted by \\n.");
+            Console.WriteLine("Invalid values will be ignored!");
+
+            while (true)
+            {
+                string input = Console.ReadLine();
+
+                if (Int32.TryParse(input, out element))
+                {
+                    list.Add(element);
+                }
+                else if (input == "q")
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine("Your array is: ");
+            foreach(int e in list) 
+            {
+                Console.Write(e + "\t");
+            }
+            
+            Console.WriteLine("\nThe longest increasing sequence is:");
+            int[] longestSequence = findLongestIncreasingSequence(list.ToArray());
+            foreach (int e in longestSequence)
+            {
+                Console.Write(e + "\t");
+            }
+            Console.WriteLine();
         }
 
         public static int[] findLongestIncreasingSequence(int[] array)
