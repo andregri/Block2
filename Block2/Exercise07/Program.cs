@@ -11,7 +11,7 @@ namespace Exercise7
             do
             {
                 Console.Write("Enter an integer: ");
-            } while (!Int32.TryParse(Console.ReadLine(), out n) && n <= 0);
+            } while (!Int32.TryParse(Console.ReadLine(), out n) || n <= 0);
 
             Console.WriteLine("Initial array is: ");
             int[] array = RandomizeArray(n);
