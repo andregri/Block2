@@ -12,9 +12,8 @@ namespace Exercise04
             {
                 do
                 {
-                    Console.WriteLine("Please enter a number. I'll convert it to word for you:");
-
-                } while (!Int32.TryParse(Console.ReadLine(), out number));
+                    Console.WriteLine("Please enter a number in range (0-999). I'll convert it to word for you:");
+                } while (!Int32.TryParse(Console.ReadLine(), out number) || number < 0 || number > 999);
 
                 Console.WriteLine("Number {0} to word is: " + numberToWords(number), number);
             }
