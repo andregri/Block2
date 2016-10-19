@@ -76,6 +76,10 @@
     <ProjectReference Include="..\Exercise09\Exercise09.csproj">
       <Project>{039d83f9-82dc-4bf8-8c04-f87f7282f8d6}</Project>
       <Name>Exercise09</Name>
+	</ProjectReference>
+    <ProjectReference Include="..\Exercise10\Exercise10.csproj">
+      <Project>{af39464c-e8c1-47f9-9a3b-31e2143069b9}</Project>
+      <Name>Exercise10</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
