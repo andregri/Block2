@@ -16,7 +16,9 @@ namespace Exercise6
 
                 if (isBinary(valueStr) == true)
                 {
-                    Console.WriteLine("- Conversion to decimal is {0,3}\n", binaryToDecimal(valueStr));
+                    int dec = binaryToDecimal(valueStr);
+                    Console.WriteLine("- Conversion to decimal is {0,3}\n", dec);
+                    Console.WriteLine("- Conversion to hex is {0,3}", dec);
                 }
 
                 else if (isDecimal(valueStr) == true)
@@ -113,7 +115,7 @@ namespace Exercise6
                     // parse each char of the passed string
                     bit = int.Parse(str[i].ToString());
 
-                    if ((bit != 1) || (bit != 0))
+                    if ((bit != 1) && (bit != 0))
                     {
                         return false;
                     }
