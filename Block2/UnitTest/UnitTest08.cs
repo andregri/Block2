@@ -31,21 +31,21 @@ namespace UnitTest
         [TestMethod]
         public void lcm_randomNumbers()
         {
-            int gcd = Program.leastCommonDivisor(34, 63);
+            int gcd = Program.leastCommonMultiple(34, 63);
             Assert.AreEqual(2142, gcd);
         }
 
         [TestMethod]
         public void lcm_equalsNumbers()
         {
-            int gcd = Program.leastCommonDivisor(8, 8);
+            int gcd = Program.leastCommonMultiple(8, 8);
             Assert.AreEqual(8, gcd);
         }
 
         [TestMethod]
         public void lcm_primeNumbers()
         {
-            int gcd = Program.leastCommonDivisor(7, 11);
+            int gcd = Program.leastCommonMultiple(7, 11);
             Assert.AreEqual(77, gcd);
         }
     }
