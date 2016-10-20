@@ -6,6 +6,23 @@ namespace Exercise8
     {
         static void Main(string[] args)
         {
+            int firstInput;
+            int secondInput;
+
+            Console.WriteLine("Please enter two integer number");
+
+            while (true)
+            {               
+                while ((int.TryParse(Console.ReadLine(), out firstInput)) && (int.TryParse(Console.ReadLine(), out secondInput)))
+                {
+                    Console.WriteLine("GCM is: " + greatestCommonDivisor(firstInput, secondInput));
+                    Console.WriteLine("LCD is: " + leastCommonDivisor(firstInput, secondInput));
+                    Console.WriteLine("\n\nPlease enter two integer number");
+                }
+
+                Console.WriteLine("Error. Please enter two INTEGER number");
+
+            }
         }
 
         public static int greatestCommonDivisor(int a, int b)
