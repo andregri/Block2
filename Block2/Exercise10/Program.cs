@@ -83,9 +83,11 @@ namespace Exercise10
         {
             int[,] matrix = new int[size, size];
             int value = 1;
-            
-            //init left half of matrix
-            int lCol = 0; //start from the first column
+
+            //init left half of matrix (until the main diagonal)
+
+            //start from the first column
+            int lCol = 0; 
 
             //loop all rows: start from the last row until the first one
             for (int lRow = size - 1; lRow >= 0; lRow--)
@@ -95,20 +97,26 @@ namespace Exercise10
                 //loop all elements of the (lRow)-th diagonal
                 for (int i = 0; i <= lCol;)
                 {
+                    //to walk on a the diagonal, we increment both indexes 
                     matrix[j++, i++] = value++;
                 }
 
+                //next diagonal will have one column more than the previous one
                 lCol++;
             }
 
 
-            //init right half of matrix
-            int rRow = size - 1;
+            //init right half of matrix, except the main diagonal
 
+            //the first diagonal we loop, is the the greatest one
+            int rRow = size - 1; 
+
+            //loop all column from 1 (no the main diagonal) to the last one
             for (int rCol = 1; rCol < size; rCol++)
             {
                 int j = rCol;
 
+                //loop all elements of the diagonal
                 for (int i = 0; i < rRow;)
                 {
                     matrix[i++, j++] = value++;
