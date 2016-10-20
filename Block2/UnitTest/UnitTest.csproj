@@ -36,7 +36,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Numerics" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -85,6 +84,10 @@
     <ProjectReference Include="..\Exercise02\Exercise02.csproj">
       <Project>{eec3daec-2a45-442d-8998-88262acbbaea}</Project>
       <Name>Exercise02</Name>
+	</ProjectReference>
+    <ProjectReference Include="..\Exercise08\Exercise08.csproj">
+      <Project>{e6a0b2f0-b07d-4ddd-bd79-2baba629b5f0}</Project>
+      <Name>Exercise08</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

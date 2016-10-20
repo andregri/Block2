@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise7
+namespace Block2
 {
     class Program
     {
@@ -48,3 +48,4 @@ namespace Exercise7
         }
     }
 }
+
