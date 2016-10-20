@@ -36,7 +36,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Numerics" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -66,15 +65,9 @@
     <Compile Include="UnitTest10.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <ProjectReference Include="..\Exercise02\Exercise02.csproj">
-      <Project>{eec3daec-2a45-442d-8998-88262acbbaea}</Project>
-      <Name>Exercise02</Name>
-=======
     <ProjectReference Include="..\Exercise08\Exercise08.csproj">
       <Project>{e6a0b2f0-b07d-4ddd-bd79-2baba629b5f0}</Project>
       <Name>Exercise08</Name>
->>>>>>> e9ecf668153bb1d691d1c71b2fef784316d162aa
     </ProjectReference>
   </ItemGroup>
   <Choose>
