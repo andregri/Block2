@@ -9,7 +9,7 @@ namespace Exercise8
             int firstInput;
             int secondInput;
 
-            Console.WriteLine("Please enter two integer number");
+            Console.WriteLine("Please enter a integer number. Press ENTER; then enter another integer and re-press ENTER:");
 
             while (true)
             {               
