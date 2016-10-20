@@ -73,16 +73,6 @@ namespace Exercise10
 
                     //avoid array bound exception 
                     row += flag;
-
-                    /*
-                    if (row == size)
-                    {
-                        row--;
-                    }
-                    else
-                    {
-                        row++;
-                    }*/
                 }
             }
 
@@ -95,13 +85,14 @@ namespace Exercise10
             int value = 1;
             
             //init left half of matrix
-            int lCol = 0;
+            int lCol = 0; //start from the first column
 
+            //loop all rows: start from the last row until the first one
             for (int lRow = size - 1; lRow >= 0; lRow--)
             {
                 int j = lRow; //temp index of rows
 
-                //loop to assign values to the (size - row)-th diagonal
+                //loop all elements of the (lRow)-th diagonal
                 for (int i = 0; i <= lCol;)
                 {
                     matrix[j++, i++] = value++;
