@@ -9,10 +9,10 @@ namespace Block2
             int firstInput;
             int secondInput;
 
+            Console.WriteLine("Please enter a integer number. Press ENTER; then enter another integer and re-press ENTER:");
+
             while (true)
             {
-                Console.WriteLine("Please enter two integer number");
-
                 while ((int.TryParse(Console.ReadLine(), out firstInput)) && (int.TryParse(Console.ReadLine(), out secondInput)))
                 {
                     Console.WriteLine("Max is: " + getMax(firstInput, secondInput));
@@ -21,9 +21,8 @@ namespace Block2
                 }
 
                 Console.WriteLine("Error. Please enter two INTEGER number");
-                int.TryParse(Console.ReadLine(), out firstInput);
-                int.TryParse(Console.ReadLine(), out secondInput);
-            };
+
+            }
         }
 
         public static int getMin(int a, int b)
