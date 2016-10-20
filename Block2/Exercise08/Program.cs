@@ -15,8 +15,8 @@ namespace Exercise8
             {               
                 while ((int.TryParse(Console.ReadLine(), out firstInput)) && (int.TryParse(Console.ReadLine(), out secondInput)))
                 {
-                    Console.WriteLine("GCM is: " + greatestCommonDivisor(firstInput, secondInput));
-                    Console.WriteLine("LCD is: " + leastCommonDivisor(firstInput, secondInput));
+                    Console.WriteLine("GCD is: " + greatestCommonDivisor(firstInput, secondInput));
+                    Console.WriteLine("LCM is: " + leastCommonMultiple(firstInput, secondInput));
                     Console.WriteLine("\n\nPlease enter two integer number");
                 }
 
@@ -44,7 +44,7 @@ namespace Exercise8
             }
         }
 
-        public static int leastCommonDivisor(int a, int b)
+        public static int leastCommonMultiple(int a, int b)
         {
             return Math.Abs(a * b) / greatestCommonDivisor(a, b);
         }
