@@ -15,9 +15,18 @@ namespace Exercise8
             {               
                 while ((int.TryParse(Console.ReadLine(), out firstInput)) && (int.TryParse(Console.ReadLine(), out secondInput)))
                 {
-                    Console.WriteLine("GCD is: " + greatestCommonDivisor(firstInput, secondInput));
-                    Console.WriteLine("LCM is: " + leastCommonMultiple(firstInput, secondInput));
-                    Console.WriteLine("\n\nPlease enter two integer number");
+                    if (firstInput == 0 && secondInput == 0)
+                    {
+                        Console.WriteLine("GCD is: " + 0);
+                        Console.WriteLine("LCM is: " + 0);
+                    }
+                    else
+                    {
+                        Console.WriteLine("GCD is: " + greatestCommonDivisor(Math.Abs(firstInput), Math.Abs(secondInput)));
+                        Console.WriteLine("LCM is: " + leastCommonMultiple(Math.Abs(firstInput), Math.Abs(secondInput)));
+                        Console.WriteLine("\n\nPlease enter two integer number");
+                    }
+                    
                 }
 
                 Console.WriteLine("Error. Please enter two INTEGER number");
@@ -30,6 +39,10 @@ namespace Exercise8
             if (b == 0)
             {
                 return a;
+            }
+            else if (a == 0)
+            {
+                return b;
             }
             else
             {
