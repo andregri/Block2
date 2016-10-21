@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Block2
+namespace Exercise7
 {
     public class Program
     {
@@ -49,4 +49,3 @@ namespace Block2
         }
     }
 }
-
