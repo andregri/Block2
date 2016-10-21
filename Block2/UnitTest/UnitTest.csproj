@@ -86,10 +86,6 @@
       <Project>{eec3daec-2a45-442d-8998-88262acbbaea}</Project>
       <Name>Exercise02</Name>
 	</ProjectReference>
-    <ProjectReference Include="..\Exercise08\Exercise08.csproj">
-      <Project>{e6a0b2f0-b07d-4ddd-bd79-2baba629b5f0}</Project>
-      <Name>Exercise08</Name>
-	</ProjectReference>
     <ProjectReference Include="..\Exercise04\Exercise04.csproj">
       <Project>{2866064b-bdff-4219-ba18-8742b1a64e93}</Project>
       <Name>Exercise04</Name>
@@ -105,6 +101,10 @@
     <ProjectReference Include="..\Exercise06\Exercise06.csproj">
       <Project>{5438fc5a-33cf-4709-ba94-abd818dbbabc}</Project>
       <Name>Exercise06</Name>
+	</ProjectReference>
+    <ProjectReference Include="..\Exercise08\Exercise08.csproj">
+      <Project>{e6a0b2f0-b07d-4ddd-bd79-2baba629b5f0}</Project>
+      <Name>Exercise08</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
