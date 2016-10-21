@@ -100,6 +100,10 @@
     <ProjectReference Include="..\Exercise07\Exercise07.csproj">
       <Project>{2855fa4b-b7cc-4680-9bbf-4e29f1ee1ec4}</Project>
       <Name>Exercise07</Name>
+	</ProjectReference>
+    <ProjectReference Include="..\Exercise06\Exercise06.csproj">
+      <Project>{5438fc5a-33cf-4709-ba94-abd818dbbabc}</Project>
+      <Name>Exercise06</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
