@@ -2,7 +2,7 @@
 
 namespace Block2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -26,6 +26,7 @@ namespace Block2
         {
             int[] array = new int[n];
 
+            //init array from 1 to n
             for (int i = 0; i < n; i++)
             {
                 array[i] = i + 1;
