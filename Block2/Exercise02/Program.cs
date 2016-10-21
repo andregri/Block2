@@ -3,7 +3,6 @@ using System.Numerics;
 
 /*
  * Program to calculate the first 100 number of Fibonacci series.
- * To debug we used "http://www.readme.it/libri/M/M00101.shtml"
  */
 
 namespace Exercise2
