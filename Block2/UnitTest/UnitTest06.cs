@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Exercise6;
 
 namespace UnitTest
 {
@@ -14,76 +15,79 @@ namespace UnitTest
             string number = "20";
 
             //Act
-            int checkDecimal = Program.isDecimal(number);
+            bool checkDecimal = Program.isDecimal(number);
 
             //Assert
             Assert.AreEqual(true, checkDecimal);
         }
 
+        [TestMethod]
         public void isDecimal_hexNumber()
         {
         	//Arrange
             string number = "205f";
 
             //Act
-            int checkDecimal = Program.isDecimal(number);
+            bool checkDecimal = Program.isDecimal(number);
 
             //Assert
             Assert.AreEqual(false, checkDecimal);
         }
 
-
+        [TestMethod]
         public void isBinary_binaryNumber()
         {
         	//Arrange
             string number = "01010111";
 
             //Act
-            int checkBinary = Program.isBinary(number);
+            bool checkBinary = Program.isBinary(number);
 
             //Assert
             Assert.AreEqual(true, checkBinary);
         }
 
+        [TestMethod]
         public void isBinary_positiveNumber()
         {
         	//Arrange
             string number = "23455654";
 
             //Act
-            int checkBinary = Program.isBinary(number);
+            bool checkBinary = Program.isBinary(number);
 
             //Assert
             Assert.AreEqual(false, checkBinary);
         }
 
-
+        [TestMethod]
         public void isHexadecimal_hexNumber()
         {
         	//Arrange
             string number = "345ff";
 
             //Act
-            int checkHexadecimal = Program.isHexadecimal(number);
+            bool checkHexadecimal = Program.isHexadecimal(number);
 
             //Assert
             Assert.AreEqual(true, checkHexadecimal);
         }
 
         // Test for cheking input conversion
+        [TestMethod]
         public void decimalToBinary_positiveInteger()
         {
         	//Arrange
             int number = 5;
 
             //Act
-            int binaryConversion = Program.decimalToBinary(number);
+            string binaryConversion = Program.decimalToBinary(number);
 
             //Assert
             Assert.AreEqual("101", binaryConversion);
         }
 
-
+        [TestMethod]
         public void binaryToDecimal_fiveBit()
         {
         	//Arrange
@@ -96,18 +100,20 @@ namespace UnitTest
             Assert.AreEqual(11, decimalConversion);
         }
 
+        [TestMethod]
         public void decimalToHex_positiveInteger()
         {
         	//Arrange
             int  number = 123;
 
             //Act
-            int hexadecimalConversion = Program.decimalToHex(number);
+            string hexadecimalConversion = Program.decimalToHex(number);
 
             //Assert
             Assert.AreEqual("7B", hexadecimalConversion);
         }
 
+        [TestMethod]
         public void hexToDecimal_sixDigits()
         {
         	//Arrange
