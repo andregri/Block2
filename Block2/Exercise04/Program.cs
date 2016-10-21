@@ -2,7 +2,7 @@
 
 namespace Exercise04
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -39,7 +39,7 @@ namespace Exercise04
             {
                 if (word != "")
                 {
-                    word += "and ";
+                    word += "and";
                 }
 
                 string[] units = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
@@ -51,6 +51,7 @@ namespace Exercise04
                 }
                 else
                 {
+                    word += " ";
                     word += tens[number / 10];
                     if ((number % 10) > 0)
                     {
