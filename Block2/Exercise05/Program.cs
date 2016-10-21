@@ -13,9 +13,8 @@ namespace Exercise5
             Console.Write("N:");
             while (double.TryParse(Console.ReadLine(), out numerator))
             {
-
                 Console.Write("X:");
-                while (!double.TryParse(Console.ReadLine(), out denominator))
+                while (!double.TryParse(Console.ReadLine(), out denominator) || (denominator == 0))
                 {
                     Console.WriteLine("\nError.Please enter a number!");
                     Console.Write("X:");
