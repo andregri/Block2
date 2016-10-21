@@ -64,6 +64,12 @@
     <Compile Include="UnitTest09.cs" />
     <Compile Include="UnitTest10.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exercise07\Exercise07.csproj">
+      <Project>{2855fa4b-b7cc-4680-9bbf-4e29f1ee1ec4}</Project>
+      <Name>Exercise07</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
