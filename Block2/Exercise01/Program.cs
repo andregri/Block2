@@ -38,7 +38,7 @@ namespace Block2
 			
 			catch
 			{
-				print("Numbers are equal");
+				Console.WriteLine("Numbers are equal");
 				return a;
 			}
         }
