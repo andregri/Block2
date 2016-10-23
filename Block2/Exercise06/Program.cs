@@ -17,8 +17,8 @@ namespace Exercise6
                 if (isBinary(valueStr) == true)
                 {
                     int dec = binaryToDecimal(valueStr);
-                    Console.WriteLine("- Conversion to decimal is {0,3}\n", dec);
-                    Console.WriteLine("- Conversion to hex is {0,3}", dec);
+                    Console.WriteLine("- Conversion to decimal is {0,3}", dec);
+                    Console.WriteLine("- Conversion to hex is {0,3}\n", dec);
                 }
 
                 else if (isDecimal(valueStr) == true)
