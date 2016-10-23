@@ -29,11 +29,11 @@ namespace Exercise9
             }
 
             Console.WriteLine("Your array is: ");
-            foreach(int e in list) 
+            foreach (int e in list)
             {
                 Console.Write(e + "\t");
             }
-            
+
             Console.WriteLine("\nThe longest increasing sequence is:");
             int[] longestSequence = findLongestIncreasingSequence(list.ToArray());
             foreach (int e in longestSequence)

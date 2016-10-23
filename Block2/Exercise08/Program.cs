@@ -13,7 +13,7 @@ namespace Exercise8
             Console.WriteLine("Please enter a integer number. Press ENTER; then enter another integer and re-press ENTER:");
 
             while (true)
-            {               
+            {
                 while ((int.TryParse(Console.ReadLine(), out firstInput)) && (int.TryParse(Console.ReadLine(), out secondInput)))
                 {
                     if (firstInput == 0 && secondInput == 0)
@@ -27,7 +27,7 @@ namespace Exercise8
                         Console.WriteLine("LCM is: " + leastCommonMultiple(Math.Abs(firstInput), Math.Abs(secondInput)));
                         Console.WriteLine("\n\nPlease enter two integer number");
                     }
-                    
+
                 }
 
                 Console.WriteLine("Error. Please enter two INTEGER number");

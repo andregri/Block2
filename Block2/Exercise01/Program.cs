@@ -27,20 +27,20 @@ namespace Block2
 
         public static int getMin(int a, int b)
         {
-			try
-			{
-				int[] array = { a, b };
-				int diff = a - b;
-				int sign = diff / Math.Abs(diff);
-				int index = (int)(0.5 + sign * 0.5);
-				return array[index];
-			}
-			
-			catch
-			{
-				Console.WriteLine("Numbers are equal");
-				return a;
-			}
+            try
+            {
+                int[] array = { a, b };
+                int diff = a - b;
+                int sign = diff / Math.Abs(diff);
+                int index = (int)(0.5 + sign * 0.5);
+                return array[index];
+            }
+
+            catch
+            {
+                Console.WriteLine("Numbers are equal");
+                return a;
+            }
         }
 
         public static int getMax(int firstNumber, int secondNumber)

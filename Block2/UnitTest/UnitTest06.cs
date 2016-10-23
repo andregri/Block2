@@ -7,11 +7,11 @@ namespace UnitTest
     [TestClass]
     public class UnitTest06
     {
-    	// Test for cheking input by user
+        // Test for cheking input by user
         [TestMethod]
         public void isDecimal_positiveInteger()
         {
-        	//Arrange
+            //Arrange
             string number = "20";
 
             //Act
@@ -24,7 +24,7 @@ namespace UnitTest
         [TestMethod]
         public void isDecimal_hexNumber()
         {
-        	//Arrange
+            //Arrange
             string number = "205f";
 
             //Act
@@ -37,7 +37,7 @@ namespace UnitTest
         [TestMethod]
         public void isBinary_binaryNumber()
         {
-        	//Arrange
+            //Arrange
             string number = "01010111";
 
             //Act
@@ -50,7 +50,7 @@ namespace UnitTest
         [TestMethod]
         public void isBinary_positiveNumber()
         {
-        	//Arrange
+            //Arrange
             string number = "23455654";
 
             //Act
@@ -63,7 +63,7 @@ namespace UnitTest
         [TestMethod]
         public void isHexadecimal_hexNumber()
         {
-        	//Arrange
+            //Arrange
             string number = "345ff";
 
             //Act
@@ -77,7 +77,7 @@ namespace UnitTest
         [TestMethod]
         public void decimalToBinary_positiveInteger()
         {
-        	//Arrange
+            //Arrange
             int number = 5;
 
             //Act
@@ -90,7 +90,7 @@ namespace UnitTest
         [TestMethod]
         public void binaryToDecimal_fiveBit()
         {
-        	//Arrange
+            //Arrange
             string number = "01011";
 
             //Act
@@ -103,8 +103,8 @@ namespace UnitTest
         [TestMethod]
         public void decimalToHex_positiveInteger()
         {
-        	//Arrange
-            int  number = 123;
+            //Arrange
+            int number = 123;
 
             //Act
             string hexadecimalConversion = Program.decimalToHex(number);
@@ -116,7 +116,7 @@ namespace UnitTest
         [TestMethod]
         public void hexToDecimal_sixDigits()
         {
-        	//Arrange
+            //Arrange
             string number = "78654f";
 
             //Act

@@ -7,7 +7,7 @@ namespace Exercise10
         static void Main(string[] args)
         {
             int size;
-            
+
             do
             {
                 Console.Write("Enter the square matrix size, please: ");
@@ -86,7 +86,7 @@ namespace Exercise10
             //init left half of matrix (until the main diagonal)
 
             //start from the first column
-            int lCol = 0; 
+            int lCol = 0;
 
             //loop all rows: start from the last row until the first one
             for (int lRow = size - 1; lRow >= 0; lRow--)
@@ -108,7 +108,7 @@ namespace Exercise10
             //init right half of matrix, except the main diagonal
 
             //the first diagonal we loop, is the the greatest one
-            int rRow = size - 1; 
+            int rRow = size - 1;
 
             //loop all column from 1 (no the main diagonal) to the last one
             for (int rCol = 1; rCol < size; rCol++)

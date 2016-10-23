@@ -33,7 +33,7 @@ namespace Exercise5
             int factorial = 1;
             for (int i = 1; i <= n; i++)
             {
-                factorial = 1; 
+                factorial = 1;
                 for (int j = i; j >= 1; j--)
                 {
                     factorial *= j;

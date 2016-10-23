@@ -16,7 +16,7 @@ namespace UnitTest
             for (int i = 0; i < units.Length; i++)
             {
                 Assert.AreEqual(units[i], Program.numberToWords(i).Trim(), "Number " + i);
-            }    
+            }
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace UnitTest
         public void numberToWordsTestRandomNumber()
         {
             int n = 279;
-            string ntw= "two hundred and seventy-nine";
+            string ntw = "two hundred and seventy-nine";
             Assert.AreEqual(ntw, Program.numberToWords(n).Trim(), "Input number: " + n);
         }
     }

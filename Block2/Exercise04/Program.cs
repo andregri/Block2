@@ -43,7 +43,7 @@ namespace Exercise04
                 }
 
                 string[] units = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-                string[] tens =  { "zero", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+                string[] tens = { "zero", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
                 if (number < 20)
                 {
@@ -56,10 +56,10 @@ namespace Exercise04
                     if ((number % 10) > 0)
                     {
                         word += "-" + units[number % 10];
-                    }  
+                    }
                 }
             }
-            
+
             return word;
         }
     }

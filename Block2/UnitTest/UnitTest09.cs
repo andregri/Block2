@@ -16,7 +16,7 @@ namespace UnitTest
 
             for (int i = 0; i < array.Length; i++)
             {
-                Assert.AreEqual(expected[i], result[i], "Index: "+ i);
+                Assert.AreEqual(expected[i], result[i], "Index: " + i);
             }
         }
 

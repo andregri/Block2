@@ -119,7 +119,7 @@ namespace Exercise6
                     {
                         return false;
                     }
-                        
+
                 }
 
                 return true;

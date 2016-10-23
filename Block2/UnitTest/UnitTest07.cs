@@ -9,8 +9,8 @@ namespace UnitTest
     {
         public bool containNumber(int[] random, int number)
         {
-            int len = random.Length;            
-            
+            int len = random.Length;
+
             //flag if the number is also in the random array
             bool flag = false;
 
