@@ -14,23 +14,23 @@ namespace Exercise10
             } while (!Int32.TryParse(Console.ReadLine(), out size) || size <= 0);
 
             Console.WriteLine("type A:");
-            printMatrix(initMatrixA(size));
+            PrintMatrix(InitMatrixA(size));
             Console.WriteLine();
 
             Console.WriteLine("type B:");
-            printMatrix(initMatrixZigZag(size));
+            PrintMatrix(InitMatrixZigZag(size));
             Console.WriteLine();
 
             Console.WriteLine("type C:");
-            printMatrix(initMatrixDiagonal(size));
+            PrintMatrix(InitMatrixDiagonal(size));
             Console.WriteLine();
 
             Console.WriteLine("type D:");
-            printMatrix(initMatrixSpiral(size));
+            PrintMatrix(InitMatrixSpiral(size));
             Console.WriteLine();
         }
 
-        public static int[,] initMatrixA(int size)
+        public static int[,] InitMatrixA(int size)
         {
             int[,] matrix = new int[size, size];
             int value = 1;
@@ -46,7 +46,7 @@ namespace Exercise10
             return matrix;
         }
 
-        public static int[,] initMatrixZigZag(int size)
+        public static int[,] InitMatrixZigZag(int size)
         {
             int[,] matrix = new int[size, size];
 
@@ -78,7 +78,7 @@ namespace Exercise10
             return matrix;
         }
 
-        public static int[,] initMatrixDiagonal(int size)
+        public static int[,] InitMatrixDiagonal(int size)
         {
             int[,] matrix = new int[size, size];
             int value = 1;
@@ -127,7 +127,7 @@ namespace Exercise10
             return matrix;
         }
 
-        public static int[,] initMatrixSpiral(int size)
+        public static int[,] InitMatrixSpiral(int size)
         {
             int[,] matrix = new int[size, size];
             int el = 0;
@@ -137,7 +137,7 @@ namespace Exercise10
 
             while (el < size * size)
             {
-                el += goDown(matrix, colPos, rowPos, size - counter, el);
+                el += GoDown(matrix, colPos, rowPos, size - counter, el);
                 rowPos += (size - counter - 1);
                 colPos++;
 
@@ -148,7 +148,7 @@ namespace Exercise10
                     break;
                 }
 
-                el += goRight(matrix, rowPos, colPos, size - counter, el);
+                el += GoRight(matrix, rowPos, colPos, size - counter, el);
                 rowPos--;
                 colPos += (size - counter - 1);
 
@@ -157,7 +157,7 @@ namespace Exercise10
                     break;
                 }
 
-                el += goUp(matrix, colPos, rowPos, size - counter, el);
+                el += GoUp(matrix, colPos, rowPos, size - counter, el);
                 colPos--;
                 rowPos -= (size - counter - 1);
 
@@ -168,7 +168,7 @@ namespace Exercise10
                     break;
                 }
 
-                el += goLeft(matrix, rowPos, colPos, size - counter, el);
+                el += GoLeft(matrix, rowPos, colPos, size - counter, el);
                 rowPos++;
                 colPos -= (size - counter - 1);
             }
@@ -176,7 +176,7 @@ namespace Exercise10
             return matrix;
         }
 
-        public static int goDown(int[,] matrix, int col, int rowStart, int passes, int valueStart)
+        public static int GoDown(int[,] matrix, int col, int rowStart, int passes, int valueStart)
         {
             for (int p = rowStart; p < rowStart + passes; p++)
             {
@@ -186,7 +186,7 @@ namespace Exercise10
             return passes;
         }
 
-        public static int goRight(int[,] matrix, int row, int colStart, int passes, int valueStart)
+        public static int GoRight(int[,] matrix, int row, int colStart, int passes, int valueStart)
         {
             for (int p = colStart; p < colStart + passes; p++)
             {
@@ -196,7 +196,7 @@ namespace Exercise10
             return passes;
         }
 
-        public static int goUp(int[,] matrix, int col, int rowStart, int passes, int valueStart)
+        public static int GoUp(int[,] matrix, int col, int rowStart, int passes, int valueStart)
         {
             for (int p = rowStart; p > rowStart - passes; p--)
             {
@@ -206,7 +206,7 @@ namespace Exercise10
             return passes;
         }
 
-        public static int goLeft(int[,] matrix, int row, int colStart, int passes, int valueStart)
+        public static int GoLeft(int[,] matrix, int row, int colStart, int passes, int valueStart)
         {
             for (int p = colStart; p > colStart - passes; p--)
             {
@@ -216,7 +216,7 @@ namespace Exercise10
             return passes;
         }
 
-        public static void printMatrix(int[,] matrix)
+        public static void PrintMatrix(int[,] matrix)
         {
             if (matrix == null)
             {
@@ -225,7 +225,7 @@ namespace Exercise10
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                printLine(4, matrix.GetLength(0));
+                PrintLine(4, matrix.GetLength(0));
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -236,10 +236,10 @@ namespace Exercise10
                 Console.WriteLine();
             }
 
-            printLine(4, matrix.GetLength(0));
+            PrintLine(4, matrix.GetLength(0));
         }
 
-        public static void printLine(int elementLen, int tot)
+        public static void PrintLine(int elementLen, int tot)
         {
             for (int j = 0; j < tot; j++)
             {
