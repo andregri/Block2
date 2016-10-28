@@ -11,40 +11,40 @@ namespace UnitTest
         string[] tens = { "zero", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
         [TestMethod]
-        public void numberToWordsLessThanTwenty()
+        public void NumberToWordsLessThanTwenty()
         {
             for (int i = 0; i < units.Length; i++)
             {
-                Assert.AreEqual(units[i], Program.numberToWords(i).Trim(), "Number " + i);
+                Assert.AreEqual(units[i], Program.NumberToWords(i).Trim(), "Number " + i);
             }
         }
 
         [TestMethod]
-        public void numberToWordsTens()
+        public void NumberToWordsTens()
         {
             for (int i = 0; i < tens.Length; i++)
             {
                 int number = i * 10;
-                Assert.AreEqual(tens[i], Program.numberToWords(number).Trim(), "Number " + number);
+                Assert.AreEqual(tens[i], Program.NumberToWords(number).Trim(), "Number " + number);
             }
         }
 
         [TestMethod]
-        public void numberToWordsHundred()
+        public void NumberToWordsHundred()
         {
             for (int i = 1; i < 10; i++)
             {
                 int number = i * 100;
-                Assert.AreEqual(units[i] + " hundred", Program.numberToWords(number).Trim(), "Number " + number);
+                Assert.AreEqual(units[i] + " hundred", Program.NumberToWords(number).Trim(), "Number " + number);
             }
         }
 
         [TestMethod]
-        public void numberToWordsTestRandomNumber()
+        public void NumberToWordsTestRandomNumber()
         {
             int n = 279;
             string ntw = "two hundred and seventy-nine";
-            Assert.AreEqual(ntw, Program.numberToWords(n).Trim(), "Input number: " + n);
+            Assert.AreEqual(ntw, Program.NumberToWords(n).Trim(), "Input number: " + n);
         }
     }
 }

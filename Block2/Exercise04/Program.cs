@@ -15,12 +15,12 @@ namespace Exercise04
                     Console.WriteLine("Please enter a number in range (0-999). I'll convert it to word for you:");
                 } while (!Int32.TryParse(Console.ReadLine(), out number) || number < 0 || number > 999);
 
-                Console.WriteLine("Number {0} to word is: " + numberToWords(number), number);
+                Console.WriteLine("Number {0} to word is: " + NumberToWords(number), number);
             }
 
         }
 
-        public static string numberToWords(int number)
+        public static string NumberToWords(int number)
         {
             string word = "";
 
@@ -28,13 +28,11 @@ namespace Exercise04
             {
                 return "zero";
             }
-
             if ((number / 100) > 0)
             {
-                word += numberToWords(number / 100) + " hundred ";
+                word += NumberToWords(number / 100) + " hundred ";
                 number %= 100;
             }
-
             if (number > 0)
             {
                 if (word != "")
