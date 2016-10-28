@@ -7,7 +7,7 @@ namespace UnitTest
     [TestClass]
     public class UnitTest07
     {
-        public bool containNumber(int[] random, int number)
+        public bool ContainNumber(int[] random, int number)
         {
             int len = random.Length;
 
@@ -27,7 +27,7 @@ namespace UnitTest
             return flag;
         }
 
-        public bool isRandom(int[] array)
+        public bool IsRandom(int[] array)
         {
             bool flag = false;
 
@@ -44,7 +44,7 @@ namespace UnitTest
             return flag;
         }
 
-        public int[] initOrderedArray(int size)
+        public int[] InitOrderedArray(int size)
         {
             int[] array = new int[size];
 
@@ -57,45 +57,45 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void containAll10Numbers()
+        public void ContainAll10Numbers()
         {
             int n = 10;
-            int[] array = initOrderedArray(n);
+            int[] array = InitOrderedArray(n);
 
             for (int i = 0; i < n; i++)
             {
-                Assert.IsTrue(containNumber(array, i + 1));
+                Assert.IsTrue(ContainNumber(array, i + 1));
             }
         }
 
         [TestMethod]
-        public void containAll100Numbers()
+        public void ContainAll100Numbers()
         {
             int n = 100;
-            int[] array = initOrderedArray(n);
+            int[] array = InitOrderedArray(n);
 
             for (int i = 0; i < n; i++)
             {
-                Assert.IsTrue(containNumber(array, i + 1));
+                Assert.IsTrue(ContainNumber(array, i + 1));
             }
         }
 
         [TestMethod]
-        public void testIsRandom10()
+        public void TestIsRandom10()
         {
             int[] array = Program.RandomizeArray(10);
 
-            bool flag = isRandom(array);
+            bool flag = IsRandom(array);
 
             Assert.IsTrue(flag);
         }
 
         [TestMethod]
-        public void testIsRandom100()
+        public void TestIsRandom100()
         {
             int[] array = Program.RandomizeArray(100);
 
-            bool flag = isRandom(array);
+            bool flag = IsRandom(array);
 
             Assert.IsTrue(flag);
         }
