@@ -20,14 +20,14 @@ namespace Exercise5
                     Console.Write("X:");
                 }
 
-                Console.WriteLine("Your sum is: {0:F2}", getSum(n, x));
+                Console.WriteLine("Your sum is: {0:F2}", GetSum(n, x));
                 Console.WriteLine("\nPlease enter two number: N and X.\nI'll calculate for you 1 + 1!/X + 2!/X^2 + … + N!/X^N");
                 Console.Write("N:");
             }
 
         }
 
-        public static double getSum(double n, double x)
+        public static double GetSum(double n, double x)
         {
             double result = 1;
             int factorial = 1;
