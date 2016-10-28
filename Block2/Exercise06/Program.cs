@@ -16,23 +16,20 @@ namespace Exercise6
 
                 if (isBinary(valueStr) == true)
                 {
-                    int dec = binaryToDecimal(valueStr);
+                    int dec = BinaryToDecimal(valueStr);
                     Console.WriteLine("- Conversion to decimal is {0,3}", dec);
                     Console.WriteLine("- Conversion to hex is {0,3}\n", dec);
                 }
-
                 else if (isDecimal(valueStr) == true)
                 {
                     int temp = int.Parse(valueStr);
-                    Console.WriteLine("- Conversion to hex is {0,3}", decimalToHex(temp));
-                    Console.WriteLine("- Conversion to bin is {0,3}\n", decimalToBinary(temp));
+                    Console.WriteLine("- Conversion to hex is {0,3}", DecimalToHex(temp));
+                    Console.WriteLine("- Conversion to bin is {0,3}\n", DecimalToBinary(temp));
                 }
-
                 else if (isHexadecimal(valueStr) == true)
                 {
-                    Console.WriteLine("- Conversion to decimal is {0,3}\n", hexToDecimal(valueStr));
+                    Console.WriteLine("- Conversion to decimal is {0,3}\n", HexToDecimal(valueStr));
                 }
-
                 else
                 {
                     Console.WriteLine("Error. You don't have insert a valid format.\nRetry");
@@ -40,32 +37,29 @@ namespace Exercise6
             }
         }
 
-        public static string decimalToBinary(int number)
+        public static string DecimalToBinary(int number)
         {
             string bin = Convert.ToString(number, 2);
             return bin;
         }
 
-
-        public static int binaryToDecimal(string number)
+        public static int BinaryToDecimal(string number)
         {
             int dec = Convert.ToInt32(number, 2);
             return dec;
         }
 
-
-        public static string decimalToHex(int number)
+        public static string DecimalToHex(int number)
         {
             string hex = number.ToString("X");
             return hex;
         }
 
-        public static int hexToDecimal(string number)
+        public static int HexToDecimal(string number)
         {
             int dec = int.Parse(number, NumberStyles.HexNumber);
             return dec;
         }
-
 
         // check if a given string contain decimal number rappresentation
         public static bool isDecimal(string str)
@@ -81,7 +75,6 @@ namespace Exercise6
                 // not a numeric value
                 return (false);
             }
-
         }
 
         // check if a given string contain only hex number rappresentation 
@@ -93,7 +86,6 @@ namespace Exercise6
                 int check = int.Parse(str, NumberStyles.HexNumber, CultureInfo.InvariantCulture);
                 return (true);
             }
-
             catch (FormatException)
             {
                 // not a numeric value
@@ -124,7 +116,6 @@ namespace Exercise6
 
                 return true;
             }
-
             catch (FormatException)
             {
                 // not a numeric value
