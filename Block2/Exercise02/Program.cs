@@ -14,28 +14,27 @@ namespace Exercise2
         {
             int counterMax = 100;
 
-            Fibonacci(counterMax);
+            BigInteger[] fib = Fibonacci(counterMax);
+
+            for (int i = 0; i < counterMax; i++)
+            {
+                Console.WriteLine("{0,3}: {1}", i + 1, fib[i]);
+            }
         }
 
-        public static BigInteger Fibonacci(int counterMax)
+        public static BigInteger[] Fibonacci(int n)
         {
-            BigInteger firstNumber = 0;
-            BigInteger secondNumber = 1;
-            BigInteger result = 0;
+            BigInteger[] fib = new BigInteger[n];
 
-            Console.Write("{0,3}: {1}\n", 0, firstNumber);
-            Console.Write("{0,3}: {1}\n", 1, secondNumber);
+            fib[0] = 0;
+            fib[1] = 1;
 
-            for (int counter = 2; counter < counterMax; counter++)
+            for (int counter = 2; counter < n; counter++)
             {
-                result = firstNumber + secondNumber;
-                Console.Write("{0,3}: {1}\n", counter, result);
-                firstNumber = secondNumber;
-                secondNumber = result;
+                fib[counter] = fib[counter - 1] + fib[counter - 2];
             }
 
-            //return the last number for debugging purpose
-            return result;
+            return fib;
         }
     }
 }
