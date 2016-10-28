@@ -8,44 +8,44 @@ namespace UnitTest
     public class UnitTest08
     {
         [TestMethod]
-        public void gcd_primeNumbers()
+        public void GcdPrimeNumbers()
         {
-            int gcd = Program.greatestCommonDivisor(17, 13);
+            int gcd = Program.GreatestCommonDivisor(17, 13);
             Assert.AreEqual(1, gcd);
         }
 
         [TestMethod]
-        public void gcd_equalsNumbers()
+        public void GcdEqualsNumbers()
         {
-            int gcd = Program.greatestCommonDivisor(18, 18);
+            int gcd = Program.GreatestCommonDivisor(18, 18);
             Assert.AreEqual(18, gcd);
         }
 
         [TestMethod]
-        public void gcd_randomNumbers()
+        public void GcdRandomNumbers()
         {
-            int gcd = Program.greatestCommonDivisor(56, 42);
+            int gcd = Program.GreatestCommonDivisor(56, 42);
             Assert.AreEqual(14, gcd);
         }
 
         [TestMethod]
-        public void lcm_randomNumbers()
+        public void LcmRandomNumbers()
         {
-            int gcd = Program.leastCommonMultiple(34, 63);
+            int gcd = Program.LeastCommonMultiple(34, 63);
             Assert.AreEqual(2142, gcd);
         }
 
         [TestMethod]
-        public void lcm_equalsNumbers()
+        public void LcmEqualsNumbers()
         {
-            int gcd = Program.leastCommonMultiple(8, 8);
+            int gcd = Program.LeastCommonMultiple(8, 8);
             Assert.AreEqual(8, gcd);
         }
 
         [TestMethod]
-        public void lcm_primeNumbers()
+        public void LcmPrimeNumbers()
         {
-            int gcd = Program.leastCommonMultiple(7, 11);
+            int gcd = Program.LeastCommonMultiple(7, 11);
             Assert.AreEqual(77, gcd);
         }
     }

@@ -23,19 +23,17 @@ namespace Exercise8
                     }
                     else
                     {
-                        Console.WriteLine("GCD is: " + greatestCommonDivisor(Math.Abs(firstInput), Math.Abs(secondInput)));
-                        Console.WriteLine("LCM is: " + leastCommonMultiple(Math.Abs(firstInput), Math.Abs(secondInput)));
+                        Console.WriteLine("GCD is: " + GreatestCommonDivisor(Math.Abs(firstInput), Math.Abs(secondInput)));
+                        Console.WriteLine("LCM is: " + LeastCommonMultiple(Math.Abs(firstInput), Math.Abs(secondInput)));
                         Console.WriteLine("\n\nPlease enter two integer number");
                     }
-
                 }
 
                 Console.WriteLine("Error. Please enter two INTEGER number");
-
             }
         }
 
-        public static int greatestCommonDivisor(int a, int b)
+        public static int GreatestCommonDivisor(int a, int b)
         {
             if (b == 0)
             {
@@ -49,18 +47,18 @@ namespace Exercise8
             {
                 if (a > b)
                 {
-                    return greatestCommonDivisor(a - b, b);
+                    return GreatestCommonDivisor(a - b, b);
                 }
                 else
                 {
-                    return greatestCommonDivisor(a, b - a);
+                    return GreatestCommonDivisor(a, b - a);
                 }
             }
         }
 
-        public static int leastCommonMultiple(int a, int b)
+        public static int LeastCommonMultiple(int a, int b)
         {
-            return Math.Abs(a * b) / greatestCommonDivisor(a, b);
+            return Math.Abs(a * b) / GreatestCommonDivisor(a, b);
         }
     }
 }
