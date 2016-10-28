@@ -35,7 +35,7 @@ namespace Exercise9
             }
 
             Console.WriteLine("\nThe longest increasing sequence is:");
-            int[] longestSequence = findLongestIncreasingSequence(list.ToArray());
+            int[] longestSequence = FindLongestIncreasingSequence(list.ToArray());
             foreach (int e in longestSequence)
             {
                 Console.Write(e + "\t");
@@ -43,9 +43,9 @@ namespace Exercise9
             Console.WriteLine();
         }
 
-        public static int[] findLongestIncreasingSequence(int[] array)
+        public static int[] FindLongestIncreasingSequence(int[] array)
         {
-            int[] lengthArray = findLengthIncreasingSequence(array);
+            int[] lengthArray = FindLengthIncreasingSequence(array);
 
             int maxLen = lengthArray.Max();
 
@@ -78,7 +78,7 @@ namespace Exercise9
             return longest;
         }
 
-        public static int[] findLengthIncreasingSequence(int[] array)
+        public static int[] FindLengthIncreasingSequence(int[] array)
         {
             int length = array.Length;
             int[] lengthArray = new int[length];
