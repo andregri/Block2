@@ -15,35 +15,25 @@ namespace Block2
             {
                 while ((int.TryParse(Console.ReadLine(), out firstInput)) && (int.TryParse(Console.ReadLine(), out secondInput)))
                 {
-                    Console.WriteLine("Max is: " + getMax(firstInput, secondInput));
-                    Console.WriteLine("Min is: " + getMin(firstInput, secondInput));
+                    Console.WriteLine("Max is: " + GetMax(firstInput, secondInput));
+                    Console.WriteLine("Min is: " + GetMin(firstInput, secondInput));
                     Console.WriteLine("\n\nPlease enter two integer number");
                 }
 
                 Console.WriteLine("Error. Please enter two INTEGER number");
-
             }
         }
 
-        public static int getMin(int a, int b)
+        public static int GetMin(int firstNumber, int secondNumber)
         {
-            try
-            {
-                int[] array = { a, b };
-                int diff = a - b;
-                int sign = diff / Math.Abs(diff);
-                int index = (int)(0.5 + sign * 0.5);
-                return array[index];
-            }
+            int diff = firstNumber - secondNumber;
+            int sgn = (diff >> 31) & 0x1;
+            int min = secondNumber + (sgn * diff);
 
-            catch
-            {
-                Console.WriteLine("Numbers are equal");
-                return a;
-            }
+            return min;
         }
 
-        public static int getMax(int firstNumber, int secondNumber)
+        public static int GetMax(int firstNumber, int secondNumber)
         {
 
             int diff = firstNumber - secondNumber;                      // the difference is negative if 'firstNumber' < 'secondNumber'
