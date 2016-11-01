@@ -24,7 +24,6 @@ namespace Exercise5
                 Console.WriteLine("\nPlease enter two number: N and X.\nI'll calculate for you 1 + 1!/X + 2!/X^2 + … + N!/X^N");
                 Console.Write("N:");
             }
-
         }
 
         public static double GetSum(double n, double x)

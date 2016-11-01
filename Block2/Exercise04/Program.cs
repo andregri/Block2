@@ -17,7 +17,6 @@ namespace Exercise04
 
                 Console.WriteLine("Number {0} to word is: " + NumberToWords(number), number);
             }
-
         }
 
         public static string NumberToWords(int number)
