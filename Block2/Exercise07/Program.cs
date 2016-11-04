@@ -4,6 +4,8 @@ namespace Exercise7
 {
     public class Program
     {
+        public static Random random = new Random();
+
         static void Main(string[] args)
         {
             int n;
@@ -31,8 +33,6 @@ namespace Exercise7
             {
                 array[i] = i + 1;
             }
-
-            Random random = new Random();
 
             for (int i = 0; i < n; i++)
             {
