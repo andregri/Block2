@@ -24,23 +24,15 @@ namespace Block2
             }
         }
 
-        public static int GetMin(int firstNumber, int secondNumber)
+        public static int GetMin(int a, int b)
         {
-            int diff = firstNumber - secondNumber;
-            int sgn = (diff >> 31) & 0x1;
-            int min = secondNumber + (sgn * diff);
-
-            return min;
+            return (a + b - Math.Abs(a - b)) / 2;
         }
 
-        public static int GetMax(int firstNumber, int secondNumber)
+        public static int GetMax(int a, int b)
         {
 
-            int diff = firstNumber - secondNumber;                      // the difference is negative if 'firstNumber' < 'secondNumber'
-            int sgn = (diff >> 31) & 0x1;                               // check if the value of 'diff' is negative(?)
-            int max = firstNumber - (sgn * diff);                       // if 'firstNumber' < 'secondNumber' , then 'sgn' is equal to 1 and 
-                                                                        // so (sgn * diff ) = (firstNumber - secondNumber)
-            return max;
+            return (a + b + Math.Abs(a - b)) / 2;
         }
     }
 }
